@@ -36,7 +36,7 @@ function LandingPage() {
 
     return (
         <>
-            <h1>Welcome to SudAdvisor Demo</h1>
+            <h1>Welcome to SunAdvisor Demo</h1>
             <div>Please click the button to fetch your location!</div>
             <button
                 type="button"
