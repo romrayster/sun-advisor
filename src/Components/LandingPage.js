@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
-import MapWithAMarker from "./GoogleMap"
 //const openuv_api_key = '1e7e335df1ce6168b108d51d229c50bc'
 const openuv_api_key = '7505621c8500b13276a27c5ef8dd3409'
 
@@ -45,7 +44,7 @@ function LandingPage() {
             >Get Location!</button>
 
             {location.lat !== "" && location.lon !== "" &&
-                <div> The current location is {location.lat},{location.lon}</div>
+                <div> The current location is <a href={"https://www.google.com/maps/@"+location.lat+","+location.lon+",18z"}> {location.lat},{location.lon}</a></div>
             }
             {uvDataFetched &&
                 <div>
@@ -63,12 +62,13 @@ function LandingPage() {
             }
             {location.lat !== "" && location.lon !== "" &&
                 <iframe
+                    title="GoogleMap"
                     width="450"
                     height="250"
-                    frameborder="0" style="border:0"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    frameBorder="0" 
+                    referrerPolicy="no-referrer-when-downgrade"
                     src={"https://www.google.com/maps/embed/v1/MAP_MODE?key=AIzaSyAPcrByCSVIepVCOS5OSZLBryhzmpUVih0&?q="+location.lat+ ","+ location.lon}
-                    allowfullscreen>
+                    allowFullScreen>
                 </iframe>
 
             }
