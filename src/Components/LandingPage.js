@@ -60,18 +60,7 @@ function LandingPage() {
 
                 </div>
             }
-            {location.lat !== "" && location.lon !== "" &&
-                <iframe
-                    title="GoogleMap"
-                    width="450"
-                    height="250"
-                    frameBorder="0" 
-                    referrerPolicy="no-referrer-when-downgrade"
-                    src={"https://www.google.com/maps/embed/v1/MAP_MODE?key=AIzaSyAPcrByCSVIepVCOS5OSZLBryhzmpUVih0&?q="+location.lat+ ","+ location.lon}
-                    allowFullScreen>
-                </iframe>
 
-            }
 
 
 
